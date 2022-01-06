@@ -1,6 +1,5 @@
 import WorldWeather from '../../modules/WorldWeather';
 import AboutUs from '../../modules/AboutUs/';
-import Home from '../../modules/Home';
 import Feedback from '../../modules/Feedback';
 import PinDropSharpIcon from '@mui/icons-material/PinDropSharp';
 import LocalPhoneSharpIcon from '@mui/icons-material/LocalPhoneSharp';
@@ -15,16 +14,10 @@ import BeachAccessSharpIcon from '@mui/icons-material/BeachAccessSharp';
 export const APP_NAME = 'Weather App';
 export const PAGES_INFO = [
   {
-    name: 'Home',
-    component: Home,
-    path: '/',
-    exact: true
-  },
-  {
     name: 'World weather',
     component: WorldWeather,
-    path: '/worldWeather',
-    exact: false
+    path: '/',
+    exact: true
   },
   {
     name: 'Feedback',
@@ -102,5 +95,112 @@ export const ABOUT_US = {
       text: 'App',
       iconName: <BeachAccessSharpIcon />
     }
+  ]
+};
+export const MEASUREMENT_TYPES = {
+  degrees: '°',
+  cloudiness: '%',
+  pressure: 'hPa',
+  visibility: 'm',
+  windSpeed: 'km/h'
+};
+export const FORECAST_DETAILS_LABEL = {
+  feelsLike: 'Feels Like',
+  cloudiness: 'Cloudiness',
+  pressure: 'Pressure',
+  visibility: 'Visibility',
+  windSpeed: 'Wind speed'
+};
+export const WEATHER_ICON_TOOLTIPS = {
+  d432: 'Overcast and snow',
+  d422: 'Overcast snow and showers',
+  d322: 'Cloudy and snow showers',
+  d222: 'Partly cloudy and snow showers',
+  d412: 'Overcast and light snow',
+  d312: 'Cloudy and light snow',
+  d431: 'Overcast and wet snow',
+  d421: 'Overcast and wet snow showers',
+  d321: 'Cloudy and wet snow showers',
+  d221: 'Partly cloudy and wet snow showers',
+  d411: 'Partly cloudy and light wet snow',
+  d311: 'Cloudy and light wet snow',
+  d211: 'Overcast and light wet snow',
+  d440: 'Overcast, thunderstorms with rain',
+  d340: 'Cloudy, thunderstorms with rain',
+  d240: 'Partly cloudy, thunderstorms with rain',
+  d430: 'Overcast and rain',
+  d420: 'Overcast and showers',
+  d320: 'Cloudy and showers',
+  d220: 'Partly cloudy and showers',
+  d410: 'Overcast and light rain',
+  d310: 'Cloudy and light rain',
+  d210: 'Partly cloudy and light rain',
+  d600: 'Fog',
+  d500: 'Thin upper cloud',
+  d400: 'Overcast',
+  d300: 'Cloudy',
+  d200: 'Partly cloudy',
+  d100: 'Mostly clear',
+  d000: 'Clear',
+  n432: 'Overcast and snow',
+  n422: 'Overcast snow and showers',
+  n322: 'Cloudy and snow showers',
+  n222: 'Partly cloudy and snow showers',
+  n412: 'Overcast and light snow',
+  n312: 'Cloudy and light snow',
+  n431: 'Overcast and wet snow',
+  n421: 'Overcast and wet snow showers',
+  n321: 'Cloudy and wet snow showers',
+  n221: 'Partly cloudy and wet snow showers',
+  n411: 'Partly cloudy and light wet snow',
+  n311: 'Cloudy and light wet snow',
+  n211: 'Overcast and light wet snow',
+  n440: 'Overcast, thunderstorms with rain',
+  n340: 'Cloudy, thunderstorms with rain',
+  n240: 'Partly cloudy, thunderstorms with rain',
+  n430: 'Overcast and rain',
+  n420: 'Overcast and showers',
+  n320: 'Cloudy and showers',
+  n220: 'Partly cloudy and showers',
+  n410: 'Overcast and light rain',
+  n310: 'Cloudy and light rain',
+  n210: 'Partly cloudy and light rain',
+  n600: 'Fog',
+  n500: 'Thin upper cloud',
+  n400: 'Overcast',
+  n300: 'Cloudy',
+  n200: 'Partly cloudy',
+  n100: 'Mostly clear',
+  n000: 'Clear'
+};
+
+export const WEATHER_ICONS_BY_GROUPS = {
+  rain: ['d410', 'd420', 'd430', 'd411', 'n410', 'n420', 'n430', 'n411'],
+  rainAndSnow: ['d411', 'd421', 'd411', 'd431', 'n421', 'n431'],
+  overcastAndSnow: ['d412', 'd422', 'd432', 'n412', 'n422', 'n432'],
+  thunderstorm: ['d240', 'd340', 'd440', 'n240', 'n340', 'n440'],
+  cloudyAndRain: ['d210', 'd310', 'd220', 'd320', 'n210', 'n310', 'n220', 'n320'],
+  overcast: ['d400', 'n400'],
+  fog: ['d600', 'n600'],
+  cloudy: ['d200', 'n200', 'd300', 'n300', 'd500', 'n500'],
+  clearDay: ['d000', 'd100'],
+  clearNight: ['n000', 'n100'],
+  cloudyAndSnow: [
+    'd311',
+    'd211',
+    'd321',
+    'd221',
+    'd212',
+    'd222',
+    'd312',
+    'd322',
+    'n311',
+    'n211',
+    'n321',
+    'n221',
+    'n212',
+    'n222',
+    'n312',
+    'n322'
   ]
 };
